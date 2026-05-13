@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #3498db, #2c3e50);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.main-content {
+    padding: 30px;
+}
+
+.upload-container {
+    border: 3px dashed #3498db;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+    background: #f8f9fa;
+}
+
+.upload-container:hover {
+    background: #e8f4fc;
+    border-color: #2980b9;
+}
+
+.upload-icon {
+    font-size: 60px;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.upload-text {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#id_file {
+    display: none;
+}
+
+.browse-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.browse-btn:hover {
+    background: #2980b9;
+}
+
+.selected-file {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.analyze-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(90deg, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.analyze-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.analyze-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.result-container {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: none;
+}
+
+.result-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.score-display {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.score-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.score-label {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.score-bar {
+    height: 20px;
+    background: #ecf0f1;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.score-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ecc71, #e74c3c);
+    border-radius: 10px;
+    width: 0%;
+    transition: width 1.5s ease-in-out;
+}
+
+.feature-breakdown {
+    margin-top: 30px;
+}
+
+.feature-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.feature {
+    margin-bottom: 15px;
+}
+
+.feature-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.feature-bar {
+    height: 8px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.feature-fill {
+    height: 100%;
+    background: #3498db;
+    width: 0%;
+    transition: width 1s ease-in-out;
+}
+
+.loading {
+    text-align: center;
+    padding: 30px;
+    display: none;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background: #2c3e50;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+    
+    .upload-container {
+        padding: 20px 10px;
+    }
+}

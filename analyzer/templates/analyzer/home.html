@@ -1,0 +1,43 @@
+{% extends 'analyzer/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="upload-container" id="drop-zone">
+    <i class="fas fa-microphone-alt upload-icon"></i>
+    <p class="upload-text">Drag & drop your audio file here or click to browse</p>
+    <form id="upload-form" method="post" action="{% url 'upload_audio' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.file }}
+    </form>
+    <button class="browse-btn" id="browse-btn">Browse Files</button>
+    <p class="selected-file" id="selected-file">No file selected</p>
+</div>
+
+<button class="analyze-btn" id="analyze-btn" disabled>Analyze Stress Level</button>
+
+<div class="loading" id="loading">
+    <div class="spinner"></div>
+    <p>Analyzing your audio... This may take a few moments</p>
+</div>
+
+<div class="result-container" id="result-container">
+    <h2 class="result-title">Stress Analysis Results</h2>
+    
+    <div class="score-display">
+        <div class="score-label">Stress Score</div>
+        <div class="score-value" id="score-value">0.00</div>
+        <div class="score-label" id="score-interpretation">Neutral</div>
+    </div>
+    
+    <div class="score-bar">
+        <div class="score-fill" id="score-fill"></div>
+    </div>
+    
+    <div class="feature-breakdown">
+        <h3 class="feature-title">Feature Contributions</h3>
+        <div id="features-container">
+            <!-- Feature breakdown will be inserted here -->
+        </div>
+    </div>
+</div>
+{% endblock %}

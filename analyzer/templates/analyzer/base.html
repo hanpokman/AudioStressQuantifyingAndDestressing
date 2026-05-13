@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Stress Analyzer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'analyzer/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Audio Stress Analyzer</h1>
+            <p class="subtitle">Upload your audio to receive a detailed stress analysis</p>
+        </header>
+        
+        <div class="main-content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+        <footer>
+            <p>Audio Stress Analyzer &copy; 2025 | Using advanced audio processing algorithms</p>
+        </footer>
+    </div>
+    
+    <script src="{% static 'analyzer/js/script.js' %}"></script>
+</body>
+</html>
