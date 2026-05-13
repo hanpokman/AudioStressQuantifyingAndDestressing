@@ -80,7 +80,7 @@ Unlike black-box models, this system is:
 
 ## 📬 Contact
 
-For questions or collaboration, reach out at [your email or GitHub handle].
+For questions or collaboration, reach out at nathan.han@ucsb.edu
 
 ---
 
