@@ -91,6 +91,7 @@ Stress Score Calculated against Tempo for specific genres
 <img width="1078" height="369" alt="Screenshot 2026-05-14 at 1 22 59 AM" src="https://github.com/user-attachments/assets/13a23ff2-1dc0-4d55-979b-f238f806f2a4" />
 
 Stress Score for ALL genres
+
 <img width="761" height="504" alt="Screenshot 2026-05-14 at 1 23 39 AM" src="https://github.com/user-attachments/assets/eef09e95-0a12-453e-ab00-b95e5227c21e" />
 
 This suggests that an increase in tempo relates to increase in stress, aligning with research found by Kuppilli (2024) and McCraty et al (1998).
